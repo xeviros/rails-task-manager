@@ -1,0 +1,30 @@
+<div class="container">
+
+<!--   <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4"> -->
+
+      <h1>Task Manager</h1>
+
+      <ul>
+        <%  @tasks.each do |task| %>
+        <li><% if task[:completed] == true %>
+              <%= '<i class="far fa-check-square"></i>'.html_safe %>
+            <% else %>
+              <%= '<i class="far fa-square"></i>'.html_safe %>
+            <% end %>
+          <%= link_to task[:title], task_path(task) %>
+          <%= " " %>
+          <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, task_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+        </li>
+        <% end %>
+      </ul>
+
+      <%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_path %>
+      <%= link_to "Create new task", new_path %>
+
+
+
+
+</div>

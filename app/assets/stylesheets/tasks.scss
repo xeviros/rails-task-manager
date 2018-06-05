@@ -1,0 +1,30 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  font-family: "Varela", sans-serif;
+  margin-top: 50px;
+}
+h1 {
+  font-family: "Varela", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+
+}
+
+.fa-trash {
+  margin: 10px;
+}

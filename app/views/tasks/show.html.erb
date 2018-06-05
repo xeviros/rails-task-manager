@@ -1,0 +1,21 @@
+
+
+<h2><%= "Task title: #{@task[:title]}" %></h2>
+<p><%= "Task details: #{@task[:details]}" %></p>
+<p>
+  <% if @task[:completed] == true %>
+    <%= '<i class="far fa-smile"></i>'.html_safe + " Task completed" %>
+  <% else %>
+    <%= '<i class="far fa-frown"></i>'.html_safe + " Task not completed..." %>
+  <% end %>
+</p>
+
+<p>
+  <%=link_to '<i class="far fa-edit"></i>'.html_safe, tasks_path %>
+  <%=link_to "Edit this task!", edit_path %>
+</p>
+
+<p>
+  <%=link_to '<i class="fas fa-list-ul"></i>'.html_safe, tasks_path %>
+  <%=link_to "Go back to all tasks!", tasks_path %>
+</p>
